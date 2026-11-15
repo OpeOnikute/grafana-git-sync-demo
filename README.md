@@ -46,9 +46,9 @@ docker compose up -d --build
 ./app/loadgen.sh
 ```
 
-- App: http://localhost:8000/health  
-- Metrics: http://localhost:8000/metrics  
-- Prometheus: http://localhost:9090  
+- App: http://localhost:18000/health  
+- Metrics: http://localhost:18000/metrics  
+- Prometheus: http://localhost:19090  
 
 In Grafana Cloud, add a Prometheus datasource that can reach a tunnel/public scrape target if you want the **Error rate (live app)** panel to work. For the video, leave that panel alone and use the TestData **Error rate** panel only.
 

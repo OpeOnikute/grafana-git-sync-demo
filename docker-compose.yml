@@ -2,7 +2,7 @@ services:
   checkout:
     build: ./app
     ports:
-      - "8000:8000"
+      - "18000:8000"
     environment:
       # Keep at 3.1 for the video. Raise above 5 to turn the live panel red without a PR.
       ERROR_RATE_PERCENT: "3.1"
@@ -10,7 +10,7 @@ services:
   prometheus:
     image: prom/prometheus:v3.2.1
     ports:
-      - "9090:9090"
+      - "19090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
     depends_on:
